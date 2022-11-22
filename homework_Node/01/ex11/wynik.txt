@@ -1,0 +1,4 @@
+Wynik 3 + 5 = 8
+Wynik 3 - 5 = -2
+Wynik 3 * 5 = 15
+Wynik 3 / 5 = 0.6
