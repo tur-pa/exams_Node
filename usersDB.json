@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "642da9d2c82bebfc1dd983cb"
+  },
+  "author": "mariusz",
+  "password": "test123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642da9e30bf77a6fa43313d0"
+  },
+  "author": "franek",
+  "password": "test123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642db2146eb459f4791fe1aa"
+  },
+  "author": "zbyszek",
+  "password": "test123",
+  "__v": 0
+}]

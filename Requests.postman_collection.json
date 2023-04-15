@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "03d9eb57-dcb6-4188-930b-02564c5de4e5",
+		"name": "Advert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/users/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"enter_name_of_user\",\r\n    \"password\": \"enter_password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/users/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "author",
+								"value": "",
+								"description": "Enter author for deleting user",
+								"type": "default"
+							},
+							{
+								"key": "password",
+								"value": "",
+								"description": "Enter password for deleting user",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/users/delete/[ENTER DELETING USER NAME]",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"users",
+								"delete",
+								"[ENTER DELETING USER NAME]"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adverts",
+			"item": [
+				{
+					"name": "getAllAdverts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAdvertById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "",
+								"description": "Add header text/plain; text/html; application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/[HIT THE ID]",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"[HIT THE ID]"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterAdvert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/search/?tags=",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "author",
+									"value": "",
+									"description": "Enter name of author",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"description": "Enter tags, seperate by coma"
+								},
+								{
+									"key": "cost[gt]",
+									"value": "",
+									"description": "Enter costs grather than ",
+									"disabled": true
+								},
+								{
+									"key": "cost",
+									"value": "",
+									"description": "Enter costs equls ",
+									"disabled": true
+								},
+								{
+									"key": "cost[lt]",
+									"value": "",
+									"description": "Enter costs less than ",
+									"disabled": true
+								},
+								{
+									"key": "currency",
+									"value": null,
+									"description": "Enter currency",
+									"disabled": true
+								},
+								{
+									"key": "phoneNumber",
+									"value": null,
+									"description": "Enter phone number",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[gt]",
+									"value": null,
+									"description": "Enter date grather than",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": null,
+									"description": "Enter date",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[lt]",
+									"value": null,
+									"description": "Enter date less than",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"description": "Enter title",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newAdvert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Telefon Sony\",\r\n    \"author\": \"mariusz\",\r\n    \"category\": \"telefony\",\r\n    \"tags\": [\"telefon\", \"szkoła\"],\r\n    \"cost\": 100,\r\n    \"currency\": \"PLN\",\r\n    \"phoneNumber\": 123456789\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAdvert",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "author",
+								"value": "",
+								"description": "Enther the author of advert",
+								"type": "default"
+							},
+							{
+								"key": "password",
+								"value": "",
+								"description": "Enter the password of advert",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								""
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "",
+									"description": "Enter _id of deleting advert",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"description": "Enter title of deleting advert",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAdvert",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "author",
+								"value": "",
+								"description": "Enter the name of author",
+								"type": "default"
+							},
+							{
+								"key": "password",
+								"value": "",
+								"description": "Enter the password",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n       \"setKey\": \"setValue\"\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"description": "Enter the title of doc to update",
+									"disabled": true
+								},
+								{
+									"key": "_id",
+									"value": "",
+									"description": "Enter the _id of doc to update",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "getHeartbeat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/api/heartbeat",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

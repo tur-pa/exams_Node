@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "642db860e837a574f405bae0"
+  },
+  "title": "Samochód",
+  "author": "zbyszek",
+  "category": "samochody",
+  "tags": [
+    "zabawki",
+    "samochody"
+  ],
+  "cost": 3,
+  "currency": "PLN",
+  "phoneNumber": 123456789,
+  "createdAt": {
+    "$date": "2023-04-05T18:03:04.084Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642db9004d68421d8778e0d7"
+  },
+  "title": "Ołówek",
+  "author": "franek",
+  "category": "szkoła",
+  "tags": [
+    "szkoła",
+    "kredki"
+  ],
+  "cost": 1,
+  "currency": "PLN",
+  "phoneNumber": 123456789,
+  "createdAt": {
+    "$date": "2023-04-05T18:06:00.375Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642db9294d68421d8778e0da"
+  },
+  "title": "Telefon Sony",
+  "author": "mariusz",
+  "category": "telefony",
+  "tags": [
+    "telefon",
+    "szkoła"
+  ],
+  "cost": 100,
+  "currency": "PLN",
+  "phoneNumber": 123456789,
+  "createdAt": {
+    "$date": "2023-04-05T18:06:00.375Z"
+  },
+  "__v": 0
+}]
